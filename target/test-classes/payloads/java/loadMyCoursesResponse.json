@@ -1,0 +1,12 @@
+[
+  {
+    "file": "http://localhost:8080/api/downloadCourse/tibi.buzera@gmail.com_Titlu",
+    "path": null,
+    "email": "tibi.buzera@gmail.com",
+    "title": "Titlu",
+    "description": "Descriere",
+    "type": "crypto",
+    "data": "2023-04-29T22:56:20.885786",
+    "rating": 0.0
+  }
+]

@@ -10,6 +10,8 @@ function fn() {
     karate.log(LM)
     karate.configure('logModifier', LM.INSTANCE)
 
+    karate.configure('ssl', true);
+
     var config
 
     if (env === 'dev') {
@@ -29,7 +31,7 @@ function fn() {
         config = {
             env: env,
             myVarName: 'hello karate',
-            baseUrl: 'https://www.youtube.com/',
+            baseUrl: 'http://localhost:5223',
         }
     }
     return config;
