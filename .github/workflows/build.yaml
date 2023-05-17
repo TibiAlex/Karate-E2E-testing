@@ -1,13 +1,27 @@
-name: Deploy
+name: E2E-Testing
 on:
   workflow_dispatch:
+    inputs:
+      env:
+        description: 'Environment'
+        required: true
+      baseUrl:
+        description: 'Base URL'
+        required: true
 
 jobs:
-  build:
-    name: Run API
+  karateTesting:
+    name: Run the karate tests
     runs-on: ubuntu-latest
     steps:
-      - name: Build API
+      - name: Checkout source code
+        uses: actions/checkout@v3
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+      - name: Build project
+          run: mvn clean install
+      - name: Run Karate tests
         run: |
-          echo "Build API"
-          sleep 10s
+          mvn clean test -Dtest=customJava/JavaRunner -Dkarate.env=${{ github.event.client_payload.env }} -Dkarate.baseUrl=${{ github.event.client_payload.baseUrl }}
