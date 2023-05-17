@@ -25,7 +25,7 @@ function fn() {
         config = {
             env: env,
             myVarName: 'hello karate',
-            baseUrl: 'http://localhost:8080',
+            baseUrl: 'http://20.123.104.73:8080',
         }
     } else if (env === 'csharp') {
         config = {
