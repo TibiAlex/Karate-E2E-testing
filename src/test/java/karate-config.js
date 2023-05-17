@@ -19,7 +19,7 @@ function fn() {
         config = {
             env: env,
             myVarName: 'hello karate',
-            token: '3c2076cd81066dbb4eb4aca2442dd104e715068039418e0c2ad567b0becc8aef'
+            token: '3c2076cd81066dbb4eb4aca2442dd104e715068039418e0c2ad567b0becc8aef',
             baseUrl: baseUrl,
         }
     } else if (env === 'java') {
