@@ -1,6 +1,6 @@
 function fn() {
     var env = karate.env; // get system property 'karate.env' karate.log('karate.env system property was:', env);
-    var baseUrl = karate.baseUrl;
+    var baseUrl = karate.properties['karate.baseUrl'];
     if (!env) {
         env = 'dev';
     }
