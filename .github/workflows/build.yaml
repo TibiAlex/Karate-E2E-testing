@@ -22,7 +22,7 @@ jobs:
           java-version: '11'
           distribution: adopt
       - name: Build project
-        run: mvn clean install
+        run: mvn clean install -DskipTests
       - name: Run Karate tests
         run: |
           mvn clean test -Dtest=customJava/JavaRunner -Dkarate.env=${{ github.event.client_payload.env }} -Dkarate.baseUrl=${{ github.event.client_payload.baseUrl }}
