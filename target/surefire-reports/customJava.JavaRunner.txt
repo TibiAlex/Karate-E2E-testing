@@ -1,10 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: customJava.JavaRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.172 s <<< FAILURE! - in customJava.JavaRunner
-getAPiTest[1][1]  Time elapsed: 13.902 s  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 27.447 s <<< FAILURE! - in customJava.JavaRunner
+getAPiTest[1][1]  Time elapsed: 26.182 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
-status code was: 500, expected: 200, response time in milliseconds: 484, url: http://20.105.72.123:8080/api/subscribe, response: 
-****
-classpath:customJava/JavaProject.feature:62
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'fail'
+  'success'
+
+classpath:customJava/JavaProject.feature:98
 

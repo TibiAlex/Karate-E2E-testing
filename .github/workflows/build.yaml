@@ -25,6 +25,6 @@ jobs:
         run: mvn clean install -DskipTests
       - name: Run Karate tests
         run: |
-          echo "Environment: ${{ github.event.client_payload.env }}"
-          echo "Base URL: ${{ github.event.client_payload.baseUrl }}"
-          mvn clean test -Dtest=customJava/JavaRunner -Dkarate.env=${{ github.event.client_payload.env }} -Dkarate.baseUrl=${{ github.event.client_payload.baseUrl }}
+          echo "Environment: ${{ github.event.inputs.env }}"
+          echo "Base URL: ${{ github.event.inputs.baseUrl }}"
+          mvn clean test -Dtest=customJava/JavaRunner -Dkarate.env=${{ github.event.inputs.env }} -Dkarate.baseUrl=${{ github.event.inputs.baseUrl }}
