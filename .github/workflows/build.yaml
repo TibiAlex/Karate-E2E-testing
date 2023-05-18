@@ -8,6 +8,9 @@ on:
       baseUrl:
         description: 'Base URL'
         required: true
+      path:
+        description: 'Path to the test to be run'
+        required: true
 
 jobs:
   karateTesting:
@@ -27,4 +30,4 @@ jobs:
         run: |
           echo "Environment: ${{ github.event.inputs.env }}"
           echo "Base URL: ${{ github.event.inputs.baseUrl }}"
-          mvn clean test -Dtest=customJava/JavaRunner -Dkarate.env=${{ github.event.inputs.env }} -Dkarate.baseUrl=${{ github.event.inputs.baseUrl }}
+          mvn clean test -Dtest=${{ github.event.inputs.path }} -Dkarate.env=${{ github.event.inputs.env }} -Dkarate.baseUrl=${{ github.event.inputs.baseUrl }}
